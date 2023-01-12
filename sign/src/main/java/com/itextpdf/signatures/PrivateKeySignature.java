@@ -97,12 +97,20 @@ public class PrivateKeySignature implements IExternalSignature {
         return hashAlgorithm;
     }
 
+    public void setHashAlgorithm(String a) {
+        hashAlgorithm = a;
+    }
+
     /**
      * {@inheritDoc}
      */
     @Override
     public String getEncryptionAlgorithm() {
         return encryptionAlgorithm;
+    }
+
+    public void setEncryptionAlgorithm(String a) {
+        encryptionAlgorithm = a;
     }
 
     /**
