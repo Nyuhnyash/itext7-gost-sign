@@ -106,6 +106,12 @@ public class BouncyCastleDigest implements IExternalDigest {
             // GOST3411
             case "1.2.643.2.2.9":
                 return new GOST3411.Digest();
+            // GOST3411-2012-256
+            case "1.2.643.7.1.1.2.2":
+                return new GOST3411.Digest2012_256();
+            // GOST3411-2012-512
+            case "1.2.643.7.1.1.2.3":
+                return new GOST3411.Digest2012_512();
             default:
                 throw new NoSuchAlgorithmException(hashAlgorithm);
         }

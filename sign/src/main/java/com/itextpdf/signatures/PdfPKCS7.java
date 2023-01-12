@@ -190,6 +190,14 @@ public class PdfPKCS7 {
                 digestEncryptionAlgorithmOid = SecurityIDs.ID_RSA;
             } else if (digestEncryptionAlgorithmOid.equals("DSA")) {
                 digestEncryptionAlgorithmOid = SecurityIDs.ID_DSA;
+            } else if (digestEncryptionAlgorithmOid.equals("GOST3410")) {
+                digestEncryptionAlgorithmOid = SecurityIDs.ID_GOST3410;
+            } else if (digestEncryptionAlgorithmOid.equals("ECGOST3410")) {
+                digestEncryptionAlgorithmOid = SecurityIDs.ID_ECGOST3410;
+            } else if (digestEncryptionAlgorithmOid.equals("ECGOST3410-2012-256")) {
+                digestEncryptionAlgorithmOid = SecurityIDs.ID_ECGOST3410_2012_256;
+            } else if (digestEncryptionAlgorithmOid.equals("ECGOST3410-2012-512")) {
+                digestEncryptionAlgorithmOid = SecurityIDs.ID_ECGOST3410_2012_512;
             } else {
                 throw new PdfException(
                         SignExceptionMessageConstant.UNKNOWN_KEY_ALGORITHM).setMessageParams(digestEncryptionAlgorithmOid);
@@ -706,6 +714,14 @@ public class PdfPKCS7 {
                 this.digestEncryptionAlgorithmOid = SecurityIDs.ID_DSA;
             } else if (digestEncryptionAlgorithm.equals("ECDSA")) {
                 this.digestEncryptionAlgorithmOid = SecurityIDs.ID_ECDSA;
+            } else if (digestEncryptionAlgorithm.equals("GOST3410")) {
+                this.digestEncryptionAlgorithmOid = SecurityIDs.ID_GOST3410;
+            } else if (digestEncryptionAlgorithm.equals("ECGOST3410")) {
+                this.digestEncryptionAlgorithmOid = SecurityIDs.ID_ECGOST3410;
+            } else if (digestEncryptionAlgorithm.equals("ECGOST3410-2012-256")) {
+                this.digestEncryptionAlgorithmOid = SecurityIDs.ID_ECGOST3410_2012_256;
+            } else if (digestEncryptionAlgorithm.equals("ECGOST3410-2012-512")) {
+                this.digestEncryptionAlgorithmOid = SecurityIDs.ID_ECGOST3410_2012_512;
             } else {
                 throw new PdfException(SignExceptionMessageConstant.UNKNOWN_KEY_ALGORITHM)
                         .setMessageParams(digestEncryptionAlgorithm);
